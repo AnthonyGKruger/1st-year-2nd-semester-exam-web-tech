@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        QUESTION 2
+    </title>
+</head>
+
+<body>
+
+
+    <p id="capitalize">
+    </p>
+
+    <p id="lowerCase">
+    </p>
+
+    <p id="doesExist">
+    </p>
+
+    <p id="PositionOf">
+    </p>
+
+    <p id="toJoin">
+    </p>
+
+    <script type="text/javascript">
+        var capitalize = "richfield";
+        var lowerCase = "WEBTECH";
+        var exist = "javascript&html";
+        var PositionOf = "richfield@123";
+        var toJoin = ["WEB", "TECH"];
+
+        document.getElementById("capitalize").innerHTML = capitalize.toUpperCase();
+
+        document.getElementById("lowerCase").innerHTML = lowerCase.toLowerCase();
+
+        exist = exist.split("");
+
+        if (exist.indexOf("&") > 0) {
+            document.getElementById("doesExist").innerHTML = "& does exist in javascript&html";
+        }
+
+        document.getElementById("PositionOf").innerHTML = "The position of @ in richfield@123 is " + PositionOf.indexOf("@");
+
+        document.getElementById("toJoin").innerHTML = toJoin.join("_");
+    </script>
+</body>
+
+</html>

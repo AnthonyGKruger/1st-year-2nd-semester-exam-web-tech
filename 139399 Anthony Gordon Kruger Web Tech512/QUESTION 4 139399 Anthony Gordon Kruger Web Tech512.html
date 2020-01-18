@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>
+QUESTION 4
+</title>
+</head>
+<body>
+
+<div>
+<h3>
+Javascript Can Validate Input			
+</h3>
+<p>
+Please input a number between 1 and 10:
+</p>
+<input type="text" value="" id="input"/>
+<button onclick="Validate()" id="Submit">Submit</button>
+</div>
+		
+<script type="text/javascript">
+	
+function Validate(){
+var input = document.getElementById("input").value;
+if (!isNaN(input)){
+input = parseInt(input);
+if (input < 11){
+if (input > 1){
+window.alert("Input OK");
+}else {
+window.alert("Invalid Input");
+}
+} else {
+window.alert("Invalid Input");
+}
+}else{
+window.alert("Invalid Input");
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        QUESTION 1
+    </title>
+</head>
+
+<body>
+    <form name="form1" action="">
+
+        <p id="NameBox">
+            NAME: <input type="text" id="Name" value="" />
+        </p>
+
+        <p id="GenderGroup">
+            GENDER:<br/>
+            <input type="radio" class="gender" id="male" value="male" />MALE<br/>
+            <input type="radio" class="gender" id="female" value="female" />FEMALE<br/>
+            <input type="radio" class="gender" id="undisclosed" value="undisclosed" />UNDISCLOSED<br/>
+        </p>
+
+        <p id="sportsPlayed">
+            SPORTS PLAYED:
+            <select>
+<option id="none">none</option>
+<option id="option1">OPTION 1</option>
+<option id="option2">OPTION 2</option>
+<option id="option3">OPTION 3</option>
+<option id="option4">OPTION 4</option>
+<option id="option5">OPTION 5</option>
+<option id="option6">OPTION 6</option>
+</select>
+        </p>
+
+        <p id="termsAndConditions">
+            terms and conditions: <input type="checkbox" id="termsAndConditionsBox" />
+        </p>
+
+        <input type="Submit" value="Subscribe" onclick="Validate()">
+    </form>
+
+    <script type="text/javascript">
+        function Validate() {
+
+            if (document.getElementById("Name").value == "") {
+                window.alert("Please enter a name into the form");
+                document.getElementById("Name").focus();
+                return false;
+            } else if (document.getElementById("termsAndConditionsBox").checked == false) {
+                window.alert("Please accept the terms and conditions");
+                document.getElementById("termsAndConditionsBox").focus();
+                return false;
+            } else if (document.getElementById("male").checked == false) {
+                if (document.getElementById("female").checked == false) {
+                    if (document.getElementById("undisclosed").checked == false) {
+                        window.alert("Please select a gender option");
+                        return false;
+                    }
+                }
+            } else if (document.getElementById("option1").selected == false) {
+                if (document.getElementById("option2").selected == false) {
+                    if (document.getElementById("option3").selected == false) {
+                        if (document.getElementById("option4").selected == false) {
+                            if (document.getElementById("option5").selected == false) {
+                                if (document.getElementById("option6").selected == false) {
+                                    window.alert("Please select a sport that you have played option");
+                                    return false;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
